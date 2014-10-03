@@ -2,22 +2,24 @@ package kochpack;
 
 public class Logic
 {
-	private static Logic instance;
+private static Logic skibbelebab;
 	
 	public static Logic Instance()
 	{
-		if(instance == null)
-			instance = new Logic();
-		return instance; 
+		if(skibbelebab==null)
+		{
+			skibbelebab = new Logic();
+		}
+		return skibbelebab;
 	}
 	
 	private Logic()
 	{
-		
+		System.out.println("NOW I IS ONLY OBJECT EVAR OF THIS CLASS... \nFOREVAAAAAAAR!!");
 	}
 	
-	public boolean DoLogicStuff()
+	public void doLogicStuff()
 	{
-		return true;
+		System.out.println("\nI am one of your methods and i concur.");
 	}
 }
