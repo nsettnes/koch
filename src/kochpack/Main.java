@@ -6,5 +6,6 @@ public class Main
 	{
 		System.out.println("Dillertime");
 		System.out.println("\nThis is more than just Dillertime Niko");
+		System.out.println("\n\n It all happens down here ;)");
 	}
 }
