@@ -8,7 +8,12 @@ public class View
 {
 	public void Init()
 	{
-		Logic.Instance().DoLogicStuff();
-		//Window w = new Window(owner, gc)
+		//Logic.Instance().DoLogicStuff();
+		CreateView();
+	}
+	
+	private void CreateView()
+	{
+		Window w = new Window(owner, gc)
 	}
 }
