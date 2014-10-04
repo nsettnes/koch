@@ -6,7 +6,7 @@ public class Main
 	{
 		Line[] lines = new Line[]
 			{
-				new Line(0,250,500,250)
+				new Line(500,250,0,250)
 			};
 		View.Instance().DrawLines(lines, false);
 		
