@@ -28,21 +28,32 @@ public class Logic
 		
 		for(Line l : lines)
 		{
-			int deltaX = l.x2-l.x1;
-			int deltaY = l.y2-l.y1;
+			float deltaX = l.x2-l.x1;
+			float deltaY = l.y2-l.y1;
 			
-			int secX = l.x1 + (deltaX/3);
-			int secY = l.y1 + (deltaY/3);
+			float secX = l.x1 + (deltaX/3);
+			float secY = l.y1 + (deltaY/3);
 			
 			double thirX =  ((l.x1 + l.x2)/2) + Math.sqrt(3) * (l.y1 - l.y2)/6;
 			double thirY =  ((l.y1 + l.y2)/2) + Math.sqrt(3) * (l.x1 - l.x2)/6;
+//			float midX = (l.x1 + l.x2) * 0.5f;
+//			float midY = (l.y1 + l.y2) * 0.5f;
+//			float thirX = l.x2 - midX;
+//			float thirY = l.y2 - midY;
+//			float temp = thirX;
+//			thirX = midX - thirY*(2/3);
+//			thirY = midY*(2/3) + temp;
 			
-			int fourthX = l.x1 + 2*(deltaX/3);
-			int fourthY = l.y1 + 2*(deltaY/3);
+			int fourthX = (int) (l.x1 + 2*(deltaX/3));
+			int fourthY = (int) (l.y1 + 2*(deltaY/3));
 			
-			Line lines2 = new Line(midtX,midtY,l.x1,l.y1);
+			//Line line = new Line(midtX,midtY,l.x1,l.y1);
+			//lubi.add(line);
 			
-			lubi.add(lines2);
+			lubi.add(new Line(l.x1, l.y1, (int)secX, (int)secY));
+			lubi.add(new Line((int)secX, (int)secY, (int)thirX, (int)thirY));
+			lubi.add(new Line((int)thirX, (int)thirY, fourthX, fourthY));
+			lubi.add(new Line(fourthX, fourthY, l.x2, l.y2));
 		}
 		Line[] hali = new Line[lubi.size()];
 		
