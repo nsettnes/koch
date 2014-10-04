@@ -40,7 +40,6 @@ public class View extends JFrame
 			public void actionPerformed(ActionEvent e)
 			{
 				Logic.Instance().doLogicStuff(getLines());
-				DrawLines(new Line[]{}, true);
 			}
 		});
     	add(myButton, BorderLayout.NORTH);
