@@ -22,7 +22,10 @@ public class Logic
 	{
 		int midtX = ((lines[0].x1 + lines[0].x2)/2);
 		int midtY = ((lines[0].y1 + lines[0].y2)/2);
-		
 		Line lines2 = new Line(midtX,midtY,lines[0].x1,lines[0].y1);
+
+		Line[] hali = {lines2}; 
+		
+		View.Instance().DrawLines(hali, true);
 	}
 }
