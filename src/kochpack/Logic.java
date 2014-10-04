@@ -20,6 +20,9 @@ public class Logic
 	
 	public void doLogicStuff(Line[] lines)
 	{
-		System.out.println("\nI am one of your methods and i concur.");
+		int midtX = ((lines[0].x1 + lines[0].x2)/2);
+		int midtY = ((lines[0].y1 + lines[0].y2)/2);
+		
+		Line lines2 = new Line(midtX,midtY,lines[0].x1,lines[0].y1);
 	}
 }
