@@ -11,6 +11,8 @@ public class View extends JFrame
 	private static View instance; 
 	private Surface surface;
 	private JButton myButton;
+	private JLabel noLevel;
+	private int level = 0;
 	
 	public static View Instance()
 	{
@@ -29,8 +31,9 @@ public class View extends JFrame
     	setTitle("Lines");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
+        noLevel = new JLabel("Level: " + 0);
         
-    	myButton = new JButton("Depth + 1");
+    	myButton = new JButton("Take me to next level");
     	myButton.setSize(100, 50);
     	myButton.addActionListener(new ActionListener()
 		{
@@ -39,9 +42,12 @@ public class View extends JFrame
 			public void actionPerformed(ActionEvent e)
 			{
 				Logic.Instance().doLogicStuff(getLines());
+				level++;
+				noLevel.setText("Level: " + Integer.toString(level));
 			}
 		});
     	add(myButton, BorderLayout.NORTH);
+    	add(noLevel, BorderLayout.SOUTH);
     	
         surface = new Surface();
         add(surface);
