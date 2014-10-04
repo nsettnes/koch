@@ -29,7 +29,6 @@ public class View extends JFrame
     	setTitle("Lines");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
-        setBackground(Color.black);
         
     	myButton = new JButton("Depth + 1");
     	myButton.setSize(100, 50);
@@ -47,7 +46,7 @@ public class View extends JFrame
         surface = new Surface();
         add(surface);
         
-        setSize(500, 500);
+        setSize(600, 600);
         setLocationRelativeTo(null); 
         setVisible(true);
     }

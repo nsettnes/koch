@@ -1,5 +1,6 @@
 package kochpack;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.util.ArrayList;
@@ -17,6 +18,11 @@ class Surface extends JPanel
 		
 		for(Line l : lines)
 			currentLines.add(l);
+	}
+	
+	public Surface()
+	{
+		setBackground(Color.white);
 	}
 	
 	public void Clear()
