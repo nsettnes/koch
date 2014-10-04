@@ -8,10 +8,18 @@ import javax.swing.*;
 
 public class View extends JFrame
 {
+	private static View instance; 
 	private Surface surface;
 	private JButton myButton;
 	
-    public View() 
+	public static View Instance()
+	{
+		if(instance == null) 
+			instance = new View();
+		return instance;
+	}
+	
+    private View() 
     {    		
         initUI();
     }
