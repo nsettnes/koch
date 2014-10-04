@@ -32,7 +32,7 @@ class Surface extends JPanel
         super.paintComponent(g);
 		for(Line line : currentLines)
 		{
-			g.drawLine(line.x1, line.y1, line.x2, line.y2);
+			g.drawLine(line.x1, line.y1, line.x5, line.y5);
 		}
     }    
 }

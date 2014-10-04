@@ -9,6 +9,5 @@ public class Main
 				new Line(500,250,0,250)
 			};
 		View.Instance().DrawLines(lines, false);
-		
 	}
 }
