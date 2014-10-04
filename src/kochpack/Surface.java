@@ -10,8 +10,11 @@ class Surface extends JPanel
 {   	
 	public ArrayList<Line> currentLines = new ArrayList<Line>();
 	
-	public void DrawLines(Line[] lines)
+	public void DrawLines(Line[] lines, boolean clear)
 	{
+		if(clear)
+			currentLines.clear();
+		
 		for(Line l : lines)
 			currentLines.add(l);
 	}
@@ -25,6 +28,7 @@ class Surface extends JPanel
 	@Override
     public void paintComponent(Graphics g) 
     {
+		super.repaint();
         super.paintComponent(g);
 		for(Line line : currentLines)
 		{

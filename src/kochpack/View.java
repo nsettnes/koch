@@ -40,6 +40,7 @@ public class View extends JFrame
 			public void actionPerformed(ActionEvent e)
 			{
 				Logic.Instance().doLogicStuff(getLines());
+				DrawLines(new Line[]{}, true);
 			}
 		});
     	add(myButton, BorderLayout.NORTH);
@@ -64,11 +65,7 @@ public class View extends JFrame
     
     public void DrawLines(Line[] lines, boolean clear)
     {
-    	if(clear)
-    	{
-    		surface.Clear();
-    	}
-    	surface.DrawLines(lines);
+    	surface.DrawLines(lines, clear);
     }
     
 }
